@@ -145,5 +145,8 @@ set scrolloff=5
 " Killing Ex mode
 nnoremap Q @q
 
-colorscheme torte
+if &term == "screen"
+    set t_Co=256
+endif
 
+colorscheme torte
