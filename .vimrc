@@ -7,8 +7,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'Python-Syntax'
 call vundle#end()
-highlight MatchParen cterm=bold ctermbg=black ctermfg=green
 
 version 6.3
 
@@ -145,8 +145,6 @@ set scrolloff=5
 " Killing Ex mode
 nnoremap Q @q
 
-if &term == "screen"
-    set t_Co=256
-endif
+set t_Co=256
 
 colorscheme torte
