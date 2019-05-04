@@ -73,6 +73,8 @@ endif
 
 set sw=4 ts=4 sts=4                    " Defaults: four spaces per tab
 autocmd FileType html :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
+autocmd FileType js :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
+autocmd FileType javascript :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType htmldjango :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType css :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType python :setlocal ts=4 smarttab expandtab
@@ -140,6 +142,8 @@ nmap ,p :set invpaste paste?<cr>
 
 nmap ,fh :set ft=html<cr>
 nmap ,fp :set ft=php<cr>
+
+nmap ,j :%!python -m json.tool<cr>
 
 set scrolloff=5
 " Killing Ex mode

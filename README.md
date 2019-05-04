@@ -1,1 +1,1 @@
-My utils directory.
+Configuration files
