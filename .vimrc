@@ -49,6 +49,7 @@ set encoding=utf-8      " Set default encoding to UTF-8.
 " set laststatus=2        " When to show a statusline.
 " set autowrite           " Automatically save before :next, :make etc.
 set number
+"set relativenumber
 
 set nostartofline       " Do not jump to first character with page commands,
                         " i.e., keep the cursor in the current column.
