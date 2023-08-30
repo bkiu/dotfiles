@@ -35,13 +35,13 @@ set scrolloff=5         " Keep a context when scrolling.
 set noerrorbells        " No beeps.
 " set nomodeline          " Disable modeline.
 set modeline            " Enable modeline.
-set esckeys             " Cursor keys in insert mode.
+"set esckeys             " Cursor keys in insert mode.
 set gdefault            " Use 'g' flag by default with :s/foo/bar/.
 set magic               " Use 'magic' patterns (extended regular expressions).
 set tabstop=4           " Number of spaces <tab> counts for.
 set expandtab
 set shiftwidth=4
-set ttyscroll=0         " Turn off scrolling (this is faster).
+"set ttyscroll=0         " Turn off scrolling (this is faster).
 set ttyfast             " We have a fast terminal connection.
 set hlsearch            " Highlight search matches.
 set encoding=utf-8      " Set default encoding to UTF-8.
