@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/MatchTagAlways'
-Plugin 'Python-Syntax'
+Plugin 'vim-python/python-syntax'
 call vundle#end()
 
 version 6.3
