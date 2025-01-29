@@ -78,6 +78,7 @@ autocmd FileType js :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType javascript :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType htmldjango :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType css :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
+autocmd FileType yaml :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType python :setlocal ts=4 smarttab expandtab
 
 nmap ,t4 :set ts=4<cr>
