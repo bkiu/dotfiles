@@ -211,5 +211,6 @@ vim.cmd("set laststatus=1")
 vim.keymap.set({ 'n' }, "<leader>t", ":tabe|:Ex<cr>")
 vim.keymap.set({ 'n' }, "<leader>p", ":set invpaste paste")
 vim.keymap.set({ 'n', 'v' }, '<leader>a', ':CodeCompanionActions<cr>')
-vim.keymap.set({ 'n', 'v' }, '<leader>e', ':CodeCompanionExplain<cr>')
+vim.keymap.set({ 'n', 'v' }, '<leader>e', ':CodeCompanion explain-selection<cr>')
 vim.keymap.set({ 'n', 'v' }, '<leader>c', ':CodeCompanionChat<cr>')
+
