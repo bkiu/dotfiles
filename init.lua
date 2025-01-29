@@ -208,9 +208,10 @@ require("codecompanion").setup({
 vim.cmd("highlight Normal guibg=#1C1F23")
 vim.cmd("highlight StatusLine guifg=#FFFFFF guibg=#2F343B")
 vim.cmd("set laststatus=1")
+vim.cmd("autocmd TermOpen * setlocal nonumber norelativenumber")
 vim.keymap.set({ 'n' }, "<leader>t", ":tabe|:Ex<cr>")
 vim.keymap.set({ 'n' }, "<leader>p", ":set invpaste paste")
 vim.keymap.set({ 'n', 'v' }, '<leader>a', ':CodeCompanionActions<cr>')
 vim.keymap.set({ 'n', 'v' }, '<leader>e', ':CodeCompanion explain-selection<cr>')
 vim.keymap.set({ 'n', 'v' }, '<leader>c', ':CodeCompanionChat<cr>')
-
+vim.keymap.set({ 'n' }, '<leader>|', ':vsplit<CR>:wincmd l<CR>:terminal<CR>')
