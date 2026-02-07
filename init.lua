@@ -25,14 +25,6 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     {
-      "olimorris/codecompanion.nvim",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-treesitter/nvim-treesitter",
-      },
-      config = true
-    },
-    {
     "willothy/flatten.nvim",
     config = true,
     -- or pass configuration with
@@ -97,6 +89,8 @@ vim.cmd([[
     set wildmode=list:longest
     set wildchar=<TAB>
 
+    set clipboard=unnamedplus
+
     " Enable syntax-highlighting.
     if has("syntax")
       syntax on
@@ -155,55 +149,6 @@ vim.cmd([[
     colorscheme torte
 ]])
 
-require("codecompanion").setup({
-    adapters = {
-        ollama_remote = function()    
-          local token = os.getenv 'OLLAMA_TOKEN'
-          local url = os.getenv 'OLLAMA_REMOTE_URL'
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "ollama_remote",
-            env = {
-              url = url,
-            },
-            headers = {
-              ["Content-Type"] = "application/json",
-              ["Authorization"] = "Bearer " .. token,
-            },
-            parameters = {
-              sync = true,
-            },
-            schema = {
-                model = {
-                    default = "nemotron:latest"
-                },
-                num_ctx = {
-                    default = 8192,
-                }
-            },
-          })
-        end,
-    },
-    strategies = {
-        chat = {
-            adapter = "ollama_remote",
-        },
-        inline = {
-            adapter = "ollama_remote",
-        },
-        agent = {
-            adapter = "ollama_remote",
-        },
-    },
-    display = {
-        chat = {
-            window = {
-                layout = "horizontal",
-                position = "bottom",
-                height = 0.4,
-            },
-        }
-    },
-})
 
 vim.cmd("highlight Normal guibg=#1C1F23")
 vim.cmd("highlight StatusLine guifg=#FFFFFF guibg=#2F343B")
@@ -211,7 +156,4 @@ vim.cmd("set laststatus=1")
 vim.cmd("autocmd TermOpen * setlocal nonumber norelativenumber")
 vim.keymap.set({ 'n' }, "<leader>t", ":tabe|:Ex<cr>")
 vim.keymap.set({ 'n' }, "<leader>p", ":set invpaste paste")
-vim.keymap.set({ 'n', 'v' }, '<leader>a', ':CodeCompanionActions<cr>')
-vim.keymap.set({ 'n', 'v' }, '<leader>e', ':CodeCompanion explain-selection<cr>')
-vim.keymap.set({ 'n', 'v' }, '<leader>c', ':CodeCompanionChat<cr>')
 vim.keymap.set({ 'n' }, '<leader>|', ':vsplit<CR>:wincmd l<CR>:terminal<CR>')
