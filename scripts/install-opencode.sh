@@ -4,6 +4,9 @@ set -euo pipefail
 # Install opencode
 curl -fsSL https://opencode.ai/install | bash
 
+# Create symlink in ~/.local/bin
+ln -sf "$(which opencode)" ~/.local/bin/opencode
+
 # Configure custom provider and model
 config_dir="$HOME/.config/opencode"
 config_file="$config_dir/opencode.json"
@@ -22,9 +25,9 @@ cat > "$config_file" << 'EOF'
       },
       "models": {
         "qwen3-coder-30b-a3b": {
-          "name": "Qwen3 Coder 30B A3B",
+          "name": "Nemotron-3-Nano-30B-A3B",
           "limit": {
-            "context": 64000,
+            "context": 65536,
             "output": 8192
           }
         }
