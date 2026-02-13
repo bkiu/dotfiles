@@ -34,7 +34,7 @@ cat > "$config_file" << 'EOF'
       }
     }
   },
-  "model": "leftoverburrito/qwen3-coder-30b-a3b"
+  "model": "leftoverburrito/Nemotron-3-Nano-30B-A3B"
 }
 EOF
 
