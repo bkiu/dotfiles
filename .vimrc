@@ -49,6 +49,7 @@ set encoding=utf-8      " Set default encoding to UTF-8.
 " set laststatus=2        " When to show a statusline.
 " set autowrite           " Automatically save before :next, :make etc.
 set number
+"set relativenumber
 
 set nostartofline       " Do not jump to first character with page commands,
                         " i.e., keep the cursor in the current column.
@@ -77,6 +78,7 @@ autocmd FileType js :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType javascript :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType htmldjango :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType css :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
+autocmd FileType yaml :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType python :setlocal ts=4 smarttab expandtab
 
 nmap ,t4 :set ts=4<cr>
