@@ -24,8 +24,8 @@ cat > "$config_file" << 'EOF'
         "baseURL": "http://leftoverburrito.stargazer-darter.ts.net:8080/v1"
       },
       "models": {
-        "qwen3-coder-30b-a3b": {
-          "name": "Nemotron-3-Nano-30B-A3B",
+        "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q5_K_XL": {
+          "name": "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q5_K_XL",
           "limit": {
             "context": 65536,
             "output": 8192
@@ -34,7 +34,7 @@ cat > "$config_file" << 'EOF'
       }
     }
   },
-  "model": "leftoverburrito/Nemotron-3-Nano-30B-A3B"
+  "model": "leftoverburrito/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q5_K_XL"
 }
 EOF
 
