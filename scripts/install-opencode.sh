@@ -17,24 +17,45 @@ cat > "$config_file" << 'EOF'
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
+    "chorizoburrito": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "chorizoburrito (3090)",
+      "options": {
+        "baseURL": "http://chorizoburrito.stargazer-darter.ts.net:8080/v1"
+      },
+      "models": {
+        "gemma4": {
+          "name": "gemma4-31b",
+          "limit": {
+            "context": 262144,
+            "output": 32768
+          }
+        }
+      }
+    },
     "leftoverburrito": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "leftoverburrito",
+      "name": "leftoverburrito (3060+5060)",
       "options": {
         "baseURL": "http://leftoverburrito.stargazer-darter.ts.net:8080/v1"
       },
       "models": {
-        "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q5_K_XL": {
-          "name": "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q5_K_XL",
+        "qwen3.6": {
+          "name": "qwen3.6-35b-a3b",
           "limit": {
-            "context": 65536,
-            "output": 8192
+            "context": 262144,
+            "output": 32768
           }
         }
       }
     }
   },
-  "model": "leftoverburrito/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q5_K_XL"
+  "model": "chorizoburrito/gemma4",
+  "agent": {
+    "plan": {
+      "model": "leftoverburrito/qwen3.6"
+    }
+  }
 }
 EOF
 
