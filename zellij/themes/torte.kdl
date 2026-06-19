@@ -1,0 +1,20 @@
+// torte — Zellij theme based on the Vim "torte" colorscheme (grey on black).
+// Ported from vim runtime colors/torte.vim:
+//   fg/bg     <- Normal (#cccccc on #000000)
+//   ANSI 0-7  <- g:terminal_ansi_colors
+//   orange    <- Special (#ffa500)
+themes {
+    torte {
+        fg "#cccccc"
+        bg "#000000"
+        black "#000000"
+        red "#cd0000"
+        green "#00cd00"
+        yellow "#cdcd00"
+        blue "#0000ee"
+        magenta "#cd00cd"
+        cyan "#00cdcd"
+        white "#e5e5e5"
+        orange "#ffa500"
+    }
+}
