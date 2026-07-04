@@ -304,7 +304,7 @@ web_client {
 //   - true
 //   - false (Default)
 // 
-simplified_ui true
+simplified_ui false
  
 // Enable OSC8 hyperlink output
 // Options:
