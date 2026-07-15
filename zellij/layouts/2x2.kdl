@@ -1,0 +1,26 @@
+layout {
+    pane {
+        dimensions {
+            bottom_z 100
+            left_z 100
+        }
+    }
+    pane {
+        dimensions {
+            bottom_z 50
+            left_z 50
+        }
+    }
+    pane {
+        dimensions {
+            bottom_z 50
+            left_z 100
+        }
+    }
+    pane {
+        dimensions {
+            bottom_z 100
+            left_z 50
+        }
+    }
+}
