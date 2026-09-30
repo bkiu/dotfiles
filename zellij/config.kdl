@@ -305,7 +305,16 @@ web_client {
 //   - false (Default)
 // 
 simplified_ui false
- 
+
+// Pane frame style (zellij 0.45+ defaults to "titles", a single title line
+// above each pane; "full" keeps the pre-0.45 border so focus is obvious)
+// Options:
+//   - titles (Default)
+//   - full
+//   - none
+//
+pane_frame_style "full"
+
 // Enable OSC8 hyperlink output
 // Options:
 //   - true (Default)
